@@ -6,6 +6,11 @@ components:
   - name: universal-developer-image
     container:
       image: registry.redhat.io/devspaces/udi-rhel8@sha256:bc5d28c434089a312ab0944662e7702481ca4e898ef278cf61c0f683f35718df
+      volumeMounts:
+        - name: vol-test
+          path: /volume-test
+        - name: smol-test
+          path: /smoller
   - name: vol-test
     volume:
         size: 3Gi
